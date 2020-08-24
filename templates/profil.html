@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+
+<h2>{{session["username"]}} Profil</h2>
+<hr>
+
+<label for="basic-url">Kişisel sayfa URL'niz</label>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3">https://example.com/profil/{{session["username"]}}</span>
+  </div>
+  
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">@username {{session["username"]}}</span>
+  </div>
+  
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">@Ad-Soyad {{session["name"]}} {{session["surname"]}} </span>
+  </div>
+  
+</div>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+    <h2>Arama Sonucu</h2>
+    <hr><br>
+
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Blununan Kişi</h5>
+    <p class="card-text"></p>
+  </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{session["tahname"]}} {{session["tahsurname"]}}</li>
+        <li class="list-group-item">{{session["tahusername"]}}</li>
+        <li class="list-group-item">{{session["tahemail"]}} </li>
+        <a href="static/images/{{session["iids"]}}.png" class="btn btn-primary">Orjinal Resmini Göster</a>
+      </ul>
+    </div>
+
+
+
+
+
+{% endblock body %}
+  

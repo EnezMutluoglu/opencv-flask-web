@@ -1,0 +1,54 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+ 
+ <ul class="navbar-nav mr-auto" wfd-id="124">
+  <li class="nav-item mx-1" wfd-id="135">
+  <a class="nav-link" href="/">Anasayfa</a>
+  </li>
+
+  {% if session["logged_in"] %}
+  <li class="nav-item mx-1" wfd-id="135">
+  <a class="nav-link" href="/resimekle">Kullanıcı Bulma</a>
+  </li>
+
+  
+  {% endif %}
+  
+  </ul>
+ 
+ 
+  <ul class="navbar-nav ml-auto" wfd-id="124">
+
+  {% if session["logged_in"] %}
+  <div class="btn-group">
+  <a>  </a>
+  <button type="button" class="btn btn-warning btn-lg dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{session["username"]}}</button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/profil/{{session["username"]}}">Bilgiler</a>
+    <a class="dropdown-item" href="/logout">Çıkış</a>
+   
+    </div>
+  </div>
+
+
+  {% else %}
+  <li class="nav-item mx-1" wfd-id="135">
+  <a class="nav-link" href="/login">Giriş</a>
+  </li>
+
+  <li class="nav-item mx-1" wfd-id="135">
+  <a class="nav-link" href="/register">Kayıt Ol</a>
+  </li>
+
+  {% endif %}
+
+
+  </ul>
+  </div>
+  </div>
+  </nav>
