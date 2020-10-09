@@ -69,4 +69,4 @@ Bulunan sonuc burada gösterilir resmi göster buttonu orijinal resmi göstermek
 Bunun dışında massage.html ekranlarda mesaj çıkmasını sağlar.
 formhelper.html ise massage.html çalışması için lazım olan dosyadır.
 
-not : eğer kullanım sırasında ana sayfada dowload/ klasörü oluşmaz ise elle bir tane oluşturunuz. 
+not : eğer kullanım sırasında ana sayfada dowload/ klasörü oluşmaz ise elle bir tane oluşturunuz. eğitim ve veri klasorlerinin içini boşaltınız.
